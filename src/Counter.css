@@ -1,0 +1,60 @@
+.Counter {
+    border: 1px solid #ddd; 
+    border-radius: 12px; 
+    padding: 20px 30px; 
+    margin: 20px auto; 
+    max-width: 400px; 
+    background: linear-gradient(145deg, #f5f7fa, #e0e6f1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333; 
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .Counter:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .Counter h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .Counter span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3e4c59; 
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .Counter .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+  }
+  
+  .Counter .buttons button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(135deg, #00b0ff, #0073e6); /* Blue gradient button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .Counter .buttons button:hover {
+    background: linear-gradient(135deg, #0073e6, #00b0ff); 
+    transform: translateY(-3px); 
+  }
+  
+  .Counter .buttons button:active {
+    transform: translateY(2px); 
+  }
+  

@@ -1,0 +1,145 @@
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #a1c4fd); /* Soft gradient background */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease;
+  margin-bottom: 2rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.7));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.8));
+}
+
+/* Spinning animation for the logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card container for the counter */
+.card {
+  padding: 3rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3e4c59;
+  margin-bottom: 1rem;
+}
+
+/* Display container */
+.display {
+  padding: 1.5em;
+  background: #79c7ff;
+  border-radius: 12px;
+  border: 1px solid #4ba3ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Individual button styles */
+.buttonsClick {
+  display: flex;
+  gap: 30px;
+}
+
+.buttons > button {
+  border: none;
+  background: linear-gradient(135deg, #f5a623, #f36d6b); /* Gradient button */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.buttons > button:hover {
+  background: linear-gradient(135deg, #ff4d4d, #f08080);
+  transform: scale(1.1);
+}
+
+/* Button active state for a "click effect" */
+.buttons > button:active {
+  transform: scale(0.95);
+}
+
+/* Add subtle background color for the buttons */
+.buttons > button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.5);
+}
+
+/* Responsive design: Smaller screens */
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .display {
+    padding: 1rem;
+  }
+
+  .buttonsClick {
+    gap: 20px;
+  }
+
+  .buttons > button {
+    padding: 12px 25px;
+  }
+}
